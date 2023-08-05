@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+	<hr>
+	<!-- k1 section start--->
+   <div class="k1">
+  	    <nav>
+			<h2 class="logo">Bid<a href="file:///C:/Users/komal/OneDrive/Desktop/DE_Project/index.html" style="text-decoration: none;"><span>Up</span></a></h2>
+			<ul>
+				<li><a href="#auction_section">AUCTIONS</a></li>
+				<li><a href="#about_section">ABOUT US</a></li>
+				<li><a href="buy.html">BUY NOW</a></li>
+				<li><a href="#sell_section">SELL</a></li>
+				<li><a href="contact.html">CONTACT US</a></li>
+			</ul>
+			<a href="login.html" class="btn">Register</a>
+		</nav>
+		<hr>
+	</div>
+</div>
+<!---k1 ends---->
+
+<!------------slider----------->
+
+ <div class="img-slider">
+      <div class="slide active">
+        <img src="images/bowl.jpg" alt="">
+        <div class="info">
+          <h2> A BLUE AND WHITE 'LINGZHI' FRUIT BOWL</h2>
+          <p> 4 -25 April | Rajkot </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/water_painting.jpg" alt="">
+        <div class="info">
+          <h2> REAR WATER PAINTING </h2>
+          <p>May 2023 | Pune </p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/ring.jpg" alt="">
+        <div class="info">
+          <h2>SILVER-COLORED RING WITH RED GEMSTONE</h2>
+          <p> June 2023 | Banglore </p>
+        </div>
+      </div>
+      <div class="slide"> 
+        <img src="images/bag.jpg" alt="">
+        <div class="info">
+          <h2>THE MOTHER'S DAY SHOP</h2>
+          <p>Explore luxury finds she'll love , including designer handbags , watches , signature jewelry and more.</p>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <div class="btn active"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+        <div class="btn"></div>
+      </div>
+  </div>
+    
+
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.btn');
+    let currentSlide = 1;
+
+    // Javascript for image slider manual navigation
+    var manualNav = function(manual){
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+
+        btns.forEach((btn) => {
+          btn.classList.remove('active');
+        });
+      });
+
+      slides[manual].classList.add('active');
+      btns[manual].classList.add('active');
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        manualNav(i);
+        currentSlide = i;
+      });
+    });
+
+    // Javascript for image slider autoplay navigation
+    var repeat = function(activeClass){
+      let active = document.getElementsByClassName('active');
+      let i = 1;
+
+      var repeater = () => {
+        setTimeout(function(){
+          [...active].forEach((activeSlide) => {
+            activeSlide.classList.remove('active');
+          });
+
+        slides[i].classList.add('active');
+        btns[i].classList.add('active');
+        i++;
+
+        if(slides.length == i){
+          i = 0;
+        }
+        if(i >= slides.length){
+          return;
+        }
+        repeater();
+      }, 10000);
+      }
+      repeater();
+    }
+    repeat();
+    </script>
+<!-------------Upcoming auctions---------->
+<section class="portfolio" id="auction_section">
+    	<div class="main">
+    		<div class="about-text" style="text-align: center;">
+				<h2 style="margin-top: 30px; color: black;">Upcoming Auctions</h2>
+    		</div>
+    	</div>
+
+    		<div class="portfolio-content">
+    			<div class="row">
+    				<img src="images/water_painting.jpg">
+    				<div class="layer">
+    					<h5>Natural Paintings</h5>
+    					<p class="pra"></p>
+    					<button type="button" class="btn-2">VIEW</button>
+
+    				</div>
+
+    				
+    			</div>
+
+    			<div class="row">
+    				<img src="images/ceramic.jpg">
+    				<div class="layer">
+    					<h5>Pottery Collection</h5>
+    					<button type="button" class="btn-2">VIEW</button>
+    				</div>
+    				
+    			</div>
+
+    			<div class="row">
+    				<img src="images/furniture.jpg">
+    				<div class="layer">
+    					<h5> Furniture and Works of Art</h5>
+    					<button type="button" class="btn-2">VIEW</button>
+    				</div>
+    			</div>
+
+    			<div class="row">
+    				<img src="images/perfume.jpg">
+    				<div class="layer">
+    					<h5>Perfume Collection</h5>
+    					<button type="button" class="btn-2">VIEW</button>
+    					
+    			    </div>
+    				
+    			</div>
+
+    			<div class="row">
+    				<img src="images/pottery.jpg">
+    				<div class="layer">
+    					<h5>Treasures</h5>
+    					<button type="button" class="btn-2">VIEW</button>
+    			    </div>
+    			</div>
+
+    			<div class="row">
+    				<img src="images/shoe.jpg">
+    				<div class="layer">
+    					<h5>Shoes Collection</h5>
+    					<button type="button" class="btn-2">VIEW</button>
+    				</div>
+    			</div>
+    			<!----
+    			<button type="button" class="btn-1"><a href="mailto:bidUp_service@gmail.com">Explore All-></a></button>-->
+    		</div>
+    	</section>
+<
+<!-----sell section---->
+<section class="about" id="sell_section">
+	<div class="main">
+		
+		<div class="about-text">
+			<h2>Sell with Bid<span>Up</span></h2>
+			<p>Curious to know if your item is suitable for one of our upcoming sales?</p>
+			<p>Provide information and share images to request an online estimate now.</p>
+			<button type="button" class="btn-1"><a href="product.html">START SELLING</a></button>
+		</div>
+		<img src="images/diamond.jpg">
+	</div>
+	
+</section>
+
+<!-----About us---->
+<br><br><br><br>
+<section class="about" id="about_section">
+	<div class="main">
+		<img src="images/about.jpg">
+		<div class="about-text">
+			<h2>Who We are</h2>
+			<p>BidUp is an auction system for sellers and bidders based in Rajkot, Gujarat, India. Our platform provides a seamless and secure experience for both parties.</p>
+			<p>With BidUp, sellers can easily list their items and reach a wider audience, while bidders can bid on items they want and track their progress in real-time. Trust and transparency are at the core of our business, ensuring a fair and efficient auction process for all.</p>
+			<button type="button" class="btn-1"><a href="mailto:bidUp_service@gmail.com">Contact and Inquiry</a></button>
+		</div>
+		
+	</div>
+	
+</section>
+
+<!-----footer----->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="footer-col">
+				<h4>support</h4>
+				<ul>
+					<li><a href="#">contact us</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">locations</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>corporate</h4>
+				<ul>
+					<li><a href="#">press</a></li>
+					<li><a href="#">privacy policy</a></li>
+					<li><a href="#">corporate governance</a></li>
+					<li><a href="#">careers</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>more...</h4>
+				<ul>
+					<li><a href="#">security</a></li>
+					<li><a href="#">terms & conditions</a></li>
+					<li><a href="#">conditions of business</a></li>
+					<li><a href="#">modern slavery statement</a></li>
+					<li><a href="#">do not sell my personal information</a></li>
+				</ul>
+			</div>
+			<div class="footer-col">
+				<h4>Follows Us</h4>
+				<div class="social-links">
+					<a href="https://www.instagram.com/komal_goswami123/"><i class="fa-brands fa-instagram"></i></a>
+			        <a href="https://www.linkedin.com/in/komal-gauswami-a99283265/"><i class="fa-brands fa-linkedin-in"></i></a>
+			        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+     
+</footer>
+
+<!----footer end----->
+
+</body>
+</html>
+
+  
